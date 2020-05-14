@@ -12,7 +12,7 @@ const colors = {
 };
 
 export default function App() {
-  const [color, setColor] = useState("default");
+  const [color, setColor] = useState();
 
   return (
     <Container>
@@ -35,5 +35,5 @@ const Text = styled.Text`
 `;
 
 Text.defaultProps = {
-  type: "default",
+  color: "default",
 };
