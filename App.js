@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components/native";
 
-import MyButton from "./Button";
+import MyButton from "./Component/MyButton";
 
 const colors = {
   default: "palevioletred",
@@ -16,7 +16,7 @@ export default function App() {
 
   return (
     <Container>
-      <Text type={color}>Hi there!</Text>
+      <Text color={color}>Hi there!</Text>
       <MyButton changeColor={setColor} colors={colors} />
     </Container>
   );
@@ -31,7 +31,7 @@ const Container = styled.View`
 
 const Text = styled.Text`
   font-size: 20px;
-  color: ${(props) => colors[props.type]};
+  color: ${(props) => colors[props.color]};
 `;
 
 Text.defaultProps = {
